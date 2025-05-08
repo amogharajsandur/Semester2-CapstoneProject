@@ -119,11 +119,11 @@ body {
     .item-card-container {
         margin: 1rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20%, 4fr));
         gap: 1rem;
         justify-content: center;
         align-items: center;
-    }
+    } 
     
     .item-card {
         /* background-color: white; */
