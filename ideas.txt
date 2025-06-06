@@ -1,3 +1,19 @@
+==================================================
+
+NEW STRUCTURE (check logs.txt file for detailed changes)
+
+==================================================
+
+> Planning to 
+    - remove multiple pages html, css files;
+    + create one giant/central html, css files
+
+==================================================
+
+OLD STRUCTURE
+
+==================================================
+
 Navbar: 
     Home (Landing page: Sections(Fruits, Vegetables, Dry Fruits), About, Contact Us, Social Footer)
     Search Bar with search icon (F)
@@ -15,7 +31,7 @@ Pages:
             Title
             Description (F)
             Price
-            Add quantity to cart (C) / Add to Cart (F)
+            Add quantity (kg/grams instead of pieces) to cart (C) / Add to Cart (F)
     Shopping Cart:
         Increase/Decrease Quantity
         Remove from Cart
