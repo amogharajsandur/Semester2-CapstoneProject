@@ -1,0 +1,39 @@
+Navbar: 
+    Home (Landing page: Sections(Fruits, Vegetables, Dry Fruits), About, Contact Us, Social Footer)
+    Search Bar with search icon (F)
+    Fruits 
+    Vegetables
+    Dry Fruits (F)
+    Cart
+    Profile: Login/SignUp (F)
+
+Pages:
+    Item Pages: (Fruits / Vegetables / Dry Fruits (F))
+        Card:
+            Image
+                hover: scale 1.5x internally (similar to google)
+            Title
+            Description (F)
+            Price
+            Add quantity to cart (C) / Add to Cart (F)
+    Shopping Cart:
+        Increase/Decrease Quantity
+        Remove from Cart
+
+Footer:
+    3 Column (Flex) Sections:
+        1.  About Us
+            Contact Us
+            Privacy Policy (F)
+            Terms of Service (F)
+        2.  OmVaibhava Store X Amogha Raj Sandur
+            Socials as icons (C)
+        3.  Navigation Pages
+            Fruits
+            Vegetables
+            Dry Fruits (F)
+
+^C = Current
+^F = Future
+
+© Amogha Raj Sandur
