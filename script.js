@@ -89,7 +89,7 @@ let cardContent = [
         price: 8.00
     },
     {
-        id: "greenchilli",
+        id: "green-chilli",
         image: "assets/images/vegetables/green-chilli.jpeg",
         alt: "Green Chilli",
         title: "Green Chilli",
@@ -139,13 +139,13 @@ let cardContent = [
     }
 ];
 
-// defining arrow function (card template)
+// defining card template (arrow function)
 let cardTemplate = () => {
     return (itemCardContainer.innerHTML = cardContent.map((item) => {
         // destructuring so that to not right as item.id, item.image, etc.
         let {id, image, alt, title, price} = item;
         return `
-                    <div class="item-card">
+                    <div class="item-card" id="${id}">
                         <img width="100%" height="100%" src="${image}" alt="${alt} Image">
                         <div class="item-card-details">
                             <h3>${title}</h3>
@@ -159,9 +159,9 @@ let cardTemplate = () => {
                             <div class="price-quantity">
                                 <h2>₹ ${price}</h2>
                                 <div class="quantity-button">
-                                    <img src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
-                                    <div class="quantity">0 </div>
-                                    <img src="assets/icons/add-icon.svg" alt="Increase Quantity">
+                                    <img onclick="decreaseItemQuantity(${id})" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
+                                    <div class="quantity" id="${id}"> 0 </div>
+                                    <img onclick="increaseItemQuantity(${id})" src="assets/icons/add-icon.svg" alt="Increase Quantity">
                                 </div>
                             </div>
                         </div>
@@ -171,3 +171,11 @@ let cardTemplate = () => {
 };
 
 cardTemplate();
+
+let increaseItemQuantity = (idCapture) => {
+    alert(idCapture);
+};
+let updateItemQuantity = () => {};
+let decreaseItemQuantity = (idCapture) => {
+    alert(idCapture);
+};
