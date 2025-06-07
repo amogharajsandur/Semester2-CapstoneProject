@@ -1,22 +1,28 @@
-7 June 2025, Saturday, 1.30 HRS:
-    Changes:
-    > Individual section html, css files of Fruits & Vegetables are now archived.
-    > HTML & CSS files of Fruits are now converted into index.html & style.css files respectively, thus creating one giant file (This will now be the Products page)
-    > Home.html will now act as the Landing Page
-    > navigation: text labeled pages instead of both text and icon pages
+7 June 2025, Saturday:
+    10.00 HRS:
+        Changes:
+        > Commented profile/admin icon -> Future
 
-    Reasons:
-    - Difficult to manage multiple files
-    
-    Plans:
-    - Pages:
-        Products
-        Cart
 
-    Future:
-    - Pages:
-        About Us/Contact
-        Cart
+    1.30 HRS:
+        Changes:
+        > Individual section html, css files of Fruits & Vegetables are now archived/deleted.
+        > HTML & CSS files of Fruits are now converted into index.html & style.css files respectively, thus creating one giant file (This will now be the Products page)
+        > Home.html will now act as the Landing Page
+        > navigation: text labeled pages instead of both text and icon pages
+
+        Reasons:
+        - Difficult to manage multiple files
+        
+        Plans:
+        - Pages:
+            Products
+            Cart
+
+        Future:
+        - Pages:
+            About Us/Contact
+            Cart
 
 ==================================================
 
