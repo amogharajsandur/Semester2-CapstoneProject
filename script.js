@@ -223,9 +223,8 @@ let increaseItemQuantity = (idCapture) => {
 // ---------------------
 let updateItemQuantity = (idCapture) => {
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
-
     console.log(itemFinder.id);
-
+    //dynamically updates the quantity of an item
     document.getElementById(`quantity-${idCapture}`).innerHTML = itemFinder.quantity;
 };
 

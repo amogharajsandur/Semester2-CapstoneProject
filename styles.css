@@ -127,12 +127,13 @@ body {
                     }
 
     .item-card-container {
-        margin: 1rem;
+        margin: auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
         gap: 1rem;
         justify-content: center;
         align-items: center;
+        width: 96%;
     }
     
         .item-card {
@@ -209,6 +210,7 @@ body {
                         transition: all 0.3s ease-in-out;
                         cursor: pointer;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        border: 2px solid;
                     }
 
                     .quantity-button img:hover {
@@ -219,10 +221,37 @@ body {
 
                     .quantity-button img:active {
                         background-color: #74af21;
-                        border: #ffffff 2px solid;
+                        /* border: #ffffff 2px solid; */
                     }
 
-                    /* The below code will disable the button if quantity less than 1 (js functionality) */
+                    .quantity-button img:first-child:active {
+                        background-color:#B71C1C;
+                        transition: all 0.001s ease-in-out;
+                        cursor: pointer;
+                    }
+                    
+                    .quantity-button img:last-child:active {
+                        background-color:#74af21;
+                        transition: all 0.001s ease-in-out;
+                        cursor: pointer;
+                    }
+
+                    /* .quantity-button img:first-child {
+                        background-color: #B71C1C;
+                        border: 2px solid;
+                    }
+
+                    .quantity-button img:last-child {
+                        background-color: #90CAF9;
+                        border: 2px solid;
+                    } */
+
+                    /* .quantity-button img:last-child:hover {
+                        background-color: #74af21;
+                        border: 2px solid;
+                    } */
+
+                    /* The below code will disable the button if quantity less than 1 (js functionality yet to be added) */
                     .quantity-button img:disabled {
                         opacity: 0.5;
                         cursor: not-allowed;
@@ -299,5 +328,10 @@ body {
 @media screen and (max-width: 480px) {
     .item-card-container {
         grid-template-columns: repeat(auto-fit, minmax(66.66%, 1fr));
+    }
+
+    .item-card-container:hover {
+        width: 84%;
+        margin: auto auto;
     }
 }
