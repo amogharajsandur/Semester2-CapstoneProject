@@ -159,9 +159,9 @@ let cardTemplate = () => {
                             <div class="price-quantity">
                                 <h2>₹ ${price}</h2>
                                 <div class="quantity-button">
-                                    <img onclick="decreaseItemQuantity(${id})" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
-                                    <div class="quantity" id="${id}"> 0 </div>
-                                    <img onclick="increaseItemQuantity(${id})" src="assets/icons/add-icon.svg" alt="Increase Quantity">
+                                    <img onclick="decreaseItemQuantity('${id}')" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
+                                    <div class="quantity" id="quantity-${id}"> 0 </div>
+                                    <img onclick="increaseItemQuantity('${id}')" src="assets/icons/add-icon.svg" alt="Increase Quantity">
                                 </div>
                             </div>
                         </div>
@@ -169,13 +169,64 @@ let cardTemplate = () => {
                 `}).join('')
             );
 };
-
 cardTemplate();
 
-let increaseItemQuantity = (idCapture) => {
-    alert(idCapture);
-};
-let updateItemQuantity = () => {};
+// ---------------------
+// quantity decrement function:
+// ---------------------
 let decreaseItemQuantity = (idCapture) => {
-    alert(idCapture);
+    // alert(idCapture);
+
+    // itemFinder: Checks shoppingCart array if that item exists. 
+    let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
+    
+    if (itemFinder == undefined) {
+        alert(`${idCapture} not in cart`);
+    } else {
+        if (itemFinder.quantity === 0) {
+            shoppingCart.pop({
+                id: idCapture,
+                quantity: 0
+            });
+            alert(`${idCapture} not in cart`);
+        } else {
+            itemFinder.quantity -= 1
+        }
+    }
+    
+    // console.log(shoppingCart);
+    updateItemQuantity(idCapture)
 };
+
+// ---------------------
+// quantity increment function:
+// ---------------------
+let increaseItemQuantity = (idCapture) => {
+    // alert(idCapture);
+    let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
+    
+    if (itemFinder == undefined) {
+        shoppingCart.push({
+            id: idCapture,
+            quantity: 1
+        });
+    } else {
+        itemFinder.quantity += 1
+    }
+    
+    // console.log(shoppingCart);
+    updateItemQuantity(idCapture)
+};
+
+// ---------------------
+// quantity updater function:
+// ---------------------
+let updateItemQuantity = (idCapture) => {
+    let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
+
+    console.log(itemFinder.id);
+
+    document.getElementById(`quantity-${idCapture}`).innerHTML = itemFinder.quantity;
+};
+
+let shoppingCart = [];
