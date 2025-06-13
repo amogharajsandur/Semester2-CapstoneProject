@@ -223,9 +223,17 @@ let increaseItemQuantity = (idCapture) => {
 // ---------------------
 let updateItemQuantity = (idCapture) => {
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
-    console.log(itemFinder.id);
+    // console.log(itemFinder.id);
     //dynamically updates the quantity of an item
     document.getElementById(`quantity-${idCapture}`).innerHTML = itemFinder.quantity;
+
+    cartItemQuantity();
 };
 
 let shoppingCart = [];
+
+let cartItemQuantity = () => {
+    let cartItems = document.getElementById("cart-items")
+    // here, (x = previous item) & (y = current item)
+    cartItems.innerHTML = shoppingCart.map((item) => item.quantity).reduce((x,y) => x + y, 0)
+}
