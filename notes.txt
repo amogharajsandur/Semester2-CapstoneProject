@@ -1,3 +1,16 @@
+5 July 2025, 2358 hrs:
+
+Register popup content:
+- Name, Email, Password (+ Confirmation)
+- Already a user? -> Login
+
+Login popup content:
+Email, Password
+- Not a user? -> Register
+
+Current storage: localStorage
+
+==========
 
         - Pages:
             Products
