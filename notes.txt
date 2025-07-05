@@ -1,3 +1,14 @@
+
+        - Pages:
+            Products
+            Cart
+
+        #Future:
+        - Pages:
+            About Us/Contact
+            Cart
+
+
 ==================================================
 
 NEW STRUCTURE (check logs.txt file for detailed changes)

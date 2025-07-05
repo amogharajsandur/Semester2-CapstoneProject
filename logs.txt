@@ -1,28 +1,49 @@
+==========
+Guide:
+
+- Code implementation/changes (special comments)
+^ Challenges/bugs (potential)
+    => Solutions (potential)
+> Error message/console outputs
+# Comments (generic)
+@ Files (Where?)
+==========
+
+5 July 2025, Saturday:
+    2338 HRS:
+        # Meaning of the files:
+        assets (folder) --> Folder containing all the media files like images, icons (svgs)
+        index.html --> Main HTML file
+        logs.txt (this file) --> Contains changes documentation (Developer's POV)
+        styles.css --> Main CSS file
+        script.js --> Main JavaScript file
+        notes.txt --> For ideation, features (Generic)
+
+        @index.html
+        - Added favicon for the page
+        - Some code explaination comments added
+
+        @logs.txt
+        - Added explainations of different project files
+        - Created legend for easier understanding (to maintain consistency with other projects: adapted from my own Passwords.vjsp project)
+
+        @notes.txt (previous: ideas.txt)
+        - File renamed (to maintain consistency with other projects)
+
+––––––––––
+
 7 June 2025, Saturday:
     10.00 HRS:
         Changes:
-        > Commented profile/admin icon -> Future
-
+        - Commented profile/admin icon -> Future
 
     1.30 HRS:
         Changes:
-        > Individual section html, css files of Fruits & Vegetables are now archived/deleted.
-        > HTML & CSS files of Fruits are now converted into index.html & style.css files respectively, thus creating one giant file (This will now be the Products page)
-        > Home.html will now act as the Landing Page
-        > navigation: text labeled pages instead of both text and icon pages
-
-        Reasons:
-        - Difficult to manage multiple files
-        
-        Plans:
-        - Pages:
-            Products
-            Cart
-
-        Future:
-        - Pages:
-            About Us/Contact
-            Cart
+        - Individual section html, css files of Fruits & Vegetables are now archived/deleted.
+        - HTML & CSS files of Fruits are now converted into index.html & style.css files respectively, thus creating one giant file (This will now be the Products page)
+        - Home.html will now act as the Landing Page
+        - navigation: text labeled pages instead of both text and icon pages
+        ^ Difficult to manage multiple files
 
 ==================================================
 

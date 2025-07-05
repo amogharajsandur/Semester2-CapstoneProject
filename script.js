@@ -145,27 +145,27 @@ let cardTemplate = () => {
         // destructuring so that to not right as item.id, item.image, etc.
         let {id, image, alt, title, price} = item;
         return `
-                    <div class="item-card" id="${id}">
-                        <img width="100%" height="100%" src="${image}" alt="${alt} Image">
-                        <div class="item-card-details">
-                            <h3>${title}</h3>
-                            <!-- <div class="item-title">
-                                Banana
-                                <div class="item-action">
-                                    <img src="assets/icons/like-icon.svg" alt="Like Item">
-                                    <img src="assets/icons/share-icon.svg" alt="Share Item">
-                                </div>
-                            </div> -->
-                            <div class="price-quantity">
-                                <h2>₹ ${price}</h2>
-                                <div class="quantity-button">
-                                    <img onclick="decreaseItemQuantity('${id}')" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
-                                    <div class="quantity" id="quantity-${id}"> 0 </div>
-                                    <img onclick="increaseItemQuantity('${id}')" src="assets/icons/add-icon.svg" alt="Increase Quantity">
-                                </div>
+                <div class="item-card" id="${id}">
+                    <img width="100%" height="100%" src="${image}" alt="${alt} Image">
+                    <div class="item-card-details">
+                        <h3>${title}</h3>
+                        <!-- <div class="item-title">
+                            Banana
+                            <div class="item-action">
+                                <img src="assets/icons/like-icon.svg" alt="Like Item">
+                                <img src="assets/icons/share-icon.svg" alt="Share Item">
+                            </div>
+                        </div> -->
+                        <div class="price-quantity">
+                            <h2>₹ ${price}</h2>
+                            <div class="quantity-button">
+                                <img onclick="decreaseItemQuantity('${id}')" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
+                                <div class="quantity" id="quantity-${id}"> 0 </div>
+                                <img onclick="increaseItemQuantity('${id}')" src="assets/icons/add-icon.svg" alt="Increase Quantity">
                             </div>
                         </div>
                     </div>
+                </div>
                 `}).join('')
             );
 };
