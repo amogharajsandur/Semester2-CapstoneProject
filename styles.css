@@ -66,11 +66,12 @@ body {
             .pages ul li {
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
+                color: #74af21;
             }
 
-                .pages ul li:nth-child(1) {
+                /* .pages ul li:nth-child(1) {
                     color: #74af21;
-                }
+                } */
 
             .pages ul li:hover {
                 transition: all 0.3s ease-in-out;

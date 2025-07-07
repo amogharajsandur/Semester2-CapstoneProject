@@ -150,7 +150,7 @@ let cardTemplate = () => {
         let itemCheck = shoppingCart.find((item)=> item.id === id) || [];
         return `
                 <div class="item-card" id="${id}">
-                    <img width="100%" height="100%" src="${image}" alt="${alt} Image">
+                    <img width="100%" height="100%" src="${image}" alt="${alt} Image" draggable="false">
                     <div class="item-card-details">
                         <h3>${title}</h3>
                         <!-- <div class="item-title">
@@ -163,9 +163,9 @@ let cardTemplate = () => {
                         <div class="price-quantity">
                             <h2>₹ ${price}</h2>
                             <div class="quantity-button">
-                                <img onclick="decreaseItemQuantity('${id}')" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
+                                <img onclick="decreaseItemQuantity('${id}')" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity" draggable="false">
                                 <div class="quantity" id="quantity-${id}"> ${itemCheck.quantity === undefined ? 0 : itemCheck.quantity} </div>
-                                <img onclick="increaseItemQuantity('${id}')" src="assets/icons/add-icon.svg" alt="Increase Quantity">
+                                <img onclick="increaseItemQuantity('${id}')" src="assets/icons/add-icon.svg" alt="Increase Quantity" draggable="false">
                             </div>
                         </div>
                     </div>
