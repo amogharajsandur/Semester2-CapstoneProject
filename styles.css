@@ -1,8 +1,8 @@
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 16px;
     /* line-height: 1.5; */
 }
@@ -45,11 +45,7 @@ body {
                 text-decoration: none;
             }
 
-        .pages {
-            list-style: none;
-        }
-
-            .pages ul {
+            .pages {
                 list-style: none;
                 display: flex;
                 flex-direction: row;
@@ -58,12 +54,12 @@ body {
                 align-items: center;
             }
 
-            .pages ul a {
+            .pages a {
                 text-decoration: none;
                 color: #74af21;
             }
 
-            .pages ul li {
+            .pages li {
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
                 color: #74af21;
@@ -73,13 +69,13 @@ body {
                     color: #74af21;
                 } */
 
-            .pages ul li:hover {
+            .pages li:hover {
                 transition: all 0.3s ease-in-out;
                 text-decoration: underline;
                 color: #4a8e1f;
             }
             
-            .pages ul li:visited {
+            .pages li:visited {
                 color: #4a8e1f;
                 text-decoration: none;
             }

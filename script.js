@@ -1,11 +1,11 @@
-// selecting item card
+// itemCardContainer is a container where all the item cards are rendered.
 let itemCardContainer = document.getElementById('item-card-container');
-// console.log(itemCardContainer);
+let cartItems = document.getElementById("cart-items");
 
-// Either retrieve the contents of localStorage (if present) else just an empty array
+// This line either retrieves the contents of localStorage (if present) else assigns just an empty array.
 let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
-// content array for card templates
+// cardContent is an array holding all the information about an item.
 let cardContent = [
     {
         id: "apple",
@@ -142,10 +142,10 @@ let cardContent = [
     }
 ];
 
-// defining card template (arrow function)
+// cardTemplate is an arrow function that renders all the content cards.
 let cardTemplate = () => {
     return (itemCardContainer.innerHTML = cardContent.map((item) => {
-        // destructuring so that to not right as item.id, item.image, etc.
+        // Destructuring is used, so to not keep writing as item.id, item.image, etc.
         let {id, image, alt, title, price} = item;
         let itemCheck = shoppingCart.find((item)=> item.id === id) || [];
         return `
@@ -170,15 +170,13 @@ let cardTemplate = () => {
                         </div>
                     </div>
                 </div>
-                `}).join('')
-            );
+        `}).join('')
+    );
 };
 cardTemplate();
 
 let decreaseItemQuantity = (idCapture) => {
-    // alert(idCapture);
-
-    // itemFinder: Checks shoppingCart array if that item exists. 
+    // itemFinder checks in the shoppingCart if that item exists. 
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
     
     if (itemFinder == undefined) {
@@ -194,7 +192,7 @@ let decreaseItemQuantity = (idCapture) => {
             itemFinder.quantity -= 1
         }
     }
-
+    
     // saves a key "shoppingCart" with the values of shoppingCart array. JSON.stringify converts the objects into an understandable format
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     
@@ -203,7 +201,6 @@ let decreaseItemQuantity = (idCapture) => {
 };
 
 let increaseItemQuantity = (idCapture) => {
-    // alert(idCapture);
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
     
     if (itemFinder == undefined) {
@@ -231,8 +228,7 @@ let updateItemQuantity = (idCapture) => {
 };
 
 let cartItemQuantity = () => {
-    let cartItems = document.getElementById("cart-items")
     // here, (x = previous item) & (y = current item)
-    cartItems.innerHTML = shoppingCart.map((item) => item.quantity).reduce((x,y) => x + y, 0)
+    cartItems.innerHTML = shoppingCart.map((item) => item.quantity).reduce((x,y) => x + y, 0);
 }
 cartItemQuantity();
