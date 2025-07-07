@@ -2,6 +2,9 @@
 let itemCardContainer = document.getElementById('item-card-container');
 // console.log(itemCardContainer);
 
+// Either retrieve the contents of localStorage (if present) else just an empty array
+let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
 // content array for card templates
 let cardContent = [
     {
@@ -144,6 +147,7 @@ let cardTemplate = () => {
     return (itemCardContainer.innerHTML = cardContent.map((item) => {
         // destructuring so that to not right as item.id, item.image, etc.
         let {id, image, alt, title, price} = item;
+        let itemCheck = shoppingCart.find((item)=> item.id === id) || [];
         return `
                 <div class="item-card" id="${id}">
                     <img width="100%" height="100%" src="${image}" alt="${alt} Image">
@@ -160,7 +164,7 @@ let cardTemplate = () => {
                             <h2>₹ ${price}</h2>
                             <div class="quantity-button">
                                 <img onclick="decreaseItemQuantity('${id}')" src="assets/icons/subtract-icon.svg" alt="Decrease Quantity">
-                                <div class="quantity" id="quantity-${id}"> 0 </div>
+                                <div class="quantity" id="quantity-${id}"> ${itemCheck.quantity === undefined ? 0 : itemCheck.quantity} </div>
                                 <img onclick="increaseItemQuantity('${id}')" src="assets/icons/add-icon.svg" alt="Increase Quantity">
                             </div>
                         </div>
@@ -171,9 +175,6 @@ let cardTemplate = () => {
 };
 cardTemplate();
 
-// ---------------------
-// quantity decrement function:
-// ---------------------
 let decreaseItemQuantity = (idCapture) => {
     // alert(idCapture);
 
@@ -193,14 +194,14 @@ let decreaseItemQuantity = (idCapture) => {
             itemFinder.quantity -= 1
         }
     }
+
+    // saves a key "shoppingCart" with the values of shoppingCart array. JSON.stringify converts the objects into an understandable format
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     
     // console.log(shoppingCart);
     updateItemQuantity(idCapture)
 };
 
-// ---------------------
-// quantity increment function:
-// ---------------------
 let increaseItemQuantity = (idCapture) => {
     // alert(idCapture);
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
@@ -213,27 +214,25 @@ let increaseItemQuantity = (idCapture) => {
     } else {
         itemFinder.quantity += 1
     }
+
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     
     // console.log(shoppingCart);
     updateItemQuantity(idCapture)
 };
 
-// ---------------------
-// quantity updater function:
-// ---------------------
 let updateItemQuantity = (idCapture) => {
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
     // console.log(itemFinder.id);
     //dynamically updates the quantity of an item
     document.getElementById(`quantity-${idCapture}`).innerHTML = itemFinder.quantity;
-
+    
     cartItemQuantity();
 };
-
-let shoppingCart = [];
 
 let cartItemQuantity = () => {
     let cartItems = document.getElementById("cart-items")
     // here, (x = previous item) & (y = current item)
     cartItems.innerHTML = shoppingCart.map((item) => item.quantity).reduce((x,y) => x + y, 0)
 }
+cartItemQuantity();
