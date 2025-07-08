@@ -179,6 +179,14 @@ let decreaseItemQuantity = (idCapture) => {
     // itemFinder checks in the shoppingCart if that item exists. 
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
     
+    if(itemFinder === undefined) return;
+    else if (itemFinder.quantity === 0) { 
+        return alert(`${itemFinder.id} not in cart`);
+    } else {
+        itemFinder.quantity -= 1;
+    }
+
+    /*
     if (itemFinder == undefined) {
         alert(`${idCapture} not in cart`);
     } else {
@@ -192,12 +200,15 @@ let decreaseItemQuantity = (idCapture) => {
             itemFinder.quantity -= 1
         }
     }
+    */
+   
+    // console.log(shoppingCart);
+    updateItemQuantity(idCapture);
+
+    shoppingCart = shoppingCart.filter((x) => x.quantity !== 0);
     
     // saves a key "shoppingCart" with the values of shoppingCart array. JSON.stringify converts the objects into an understandable format
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-    
-    // console.log(shoppingCart);
-    updateItemQuantity(idCapture)
 };
 
 let increaseItemQuantity = (idCapture) => {

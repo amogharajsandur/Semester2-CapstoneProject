@@ -1,5 +1,37 @@
 =========================
-#item-card 
+.navigation-bar
+=========================
+
+<div class="navigation-bar">
+    <h1 class="logo"><a href="#">OmVaibhava Store</a></h1>
+    <ul class="pages">
+        <li>Products</li>
+        <li>About</li>
+    </ul>
+    <div class="navbar-icons">
+        <div class="shopping-cart">
+            <img draggable="false" src="assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
+            <div class="cart-items" id="cart-items">0</div>
+        </div>
+        <!-- <img src="assets/icons/account-icon.svg" alt="account-icon"> -->
+    </div>
+</div>
+
+=========================
+.footer
+=========================
+
+<div class="footer">
+    <p>© OmVaibhava Store X <a target="_blank" href="https://www.linkedin.com/in/amogharajsandur/">Amogha Raj Sandur</a></p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/amogharajsandur/" target="_blank"><img draggable="false" src="assets/icons/instagram-icon.svg" alt="instagram-icon"></a>
+        <a href="https://www.linkedin.com/in/amogharajsandur/" target="_blank"><img draggable="false" src="assets/icons/linkedin-icon.svg" alt="linkedin-icon"></a>
+        <a href="https://www.youtube.com/@amogharajsandur" target="_blank"><img draggable="false" src="assets/icons/yt-icon.svg" alt="youtube-icon"></a>
+    </div>
+</div>
+
+=========================
+.item-card 
 =========================
 
 <div class="item-card">

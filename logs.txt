@@ -1,5 +1,5 @@
 ==========
-Guide:
+Amogha's Guide:
 
 - Code implementation/changes (special comments)
 ^ Challenges/bugs (potential)
@@ -9,6 +9,51 @@ Guide:
 @ Files (Where?)
 ==========
 
+8 July 2025, Tuesday:
+    @index.html:
+    # More semantic tags are being used
+        - meta description added
+        - .item-grid-container is now converted to a <main> element (previously <div> element)
+        - .footer is now converted to a <footer> element (previously <div> element)
+        - .navigation-bar is now converted to a <header> element (previously <div> element). .pages is now wrapped in <nav>
+        - .social-links is now converted to a <nav> element (previously <div> element)
+
+    @styles.css:
+    # Hover style improved in logo
+    - More border radius applies on image & item-card element when user hovers over the item-card
+    # Changes are made to styles of some elements so to support the above changes in @index.html
+
+––––––––––
+
+7 July 2025, Monday: (I kept working on the project for almost the whole day, so for exact timeframes, check the git-commits)
+    @home.css & @home.html:
+    # Files are now deleted (previously archived)
+
+    @index.html:
+    - Using Roboto as the font now. Added the code embeddings of the font as instructed, by (https://fonts.google.com/)
+    - the hyperlink element based page logo "OmVaibhava Store" is now under h1 heading
+    - deleted the "pages" div in the navigation-bar as it was unnecessary
+    - instead the <ul> element now has the "pages" as its class
+    - a new "About" added added as a <li> in pages
+    - implemented draggable="false" for all images
+
+    @styles.css:
+    - Roboto implemented as the main font, sans-serif as the fallback font.
+    - Improved animations when hovering over a page's text (like Products, About, etc):
+        Now, When users hovers over the text, a underline & slightly dark-colored text smoothly appears.
+    - When hovering over a shopping cart items count, a slightly dark-colored text background appears.
+    - Attempted to crop the image & scale the images of a cart item, upon hovering. Later scrapped the idea as it was looking too complex.
+
+    @script.js:
+    - improved in-code comments for enhanced understanding.
+    - implemented draggable="false" for all images.
+    - localStorage implementation: to save items in shopping cart.
+
+    @logs.txt:
+    # Added explainations of for all the changes.
+
+
+––––––––––
 5 July 2025, Saturday:
     2338 HRS:
         # Meaning of the files:
@@ -18,6 +63,7 @@ Guide:
         styles.css --> Main CSS file
         script.js --> Main JavaScript file
         notes.txt --> For ideation, features (Generic)
+        snippets.txt --> Contains old/experimental code snippets from the entire project.
 
         @index.html
         - Added favicon for the page

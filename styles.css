@@ -27,10 +27,11 @@ body {
 
         .logo {
             font-weight: bold;
+            color:#74af21;
         }
         
         .logo > a {
-                color: #74af21;
+                color:#74af21;
                 text-decoration: none;
             }
 
@@ -180,7 +181,23 @@ body {
             background-color: #4a8e1f;
             color: white;
             border: 0.2rem solid black;
+            border-radius: 1rem;
         }
+
+        .item-card > img {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .item-card:hover > img {
+            border-radius: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* .item-card > img:hover {
+                clip-path: inset(5% 5% 5%);
+                scale: 1.09;
+                transition: all 0.3s ease-in-out;
+        } */
         
         .item-card-details {
             display: flex;
@@ -233,7 +250,7 @@ body {
                         transition: all 0.3s ease-in-out;
                         cursor: pointer;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        border: 2px solid;
+                        border: black 2px solid;
                     }
 
                     .quantity-button img:hover {
@@ -244,7 +261,7 @@ body {
 
                     .quantity-button img:active {
                         background-color: #74af21;
-                        /* border: #ffffff 2px solid; */
+                        border: #ffffff 2px solid;
                     }
 
                     .quantity-button img:first-child:active {
@@ -280,7 +297,7 @@ body {
                         cursor: not-allowed;
                     }
 
-    .footer {
+    footer {
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -293,16 +310,16 @@ body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     
-        .footer p {
+        footer p {
             text-align: center;
         }
         
-            .footer p a {
+            footer p a {
                 text-decoration: none;
                 color: #74af21;
             }
             
-            .footer p a:hover {
+            footer p a:hover {
                 transition: all 0.3s ease-in-out;
                 text-decoration: underline;
                 color: #4a8e1f;
