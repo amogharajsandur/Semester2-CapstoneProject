@@ -19,6 +19,8 @@ Amogha's Guide:
     
     @styles.css renamed to style.css
 
+    #about, shopping-cart html, css & js files created.
+
 ––––––––––
 
 8 July 2025, Tuesday:

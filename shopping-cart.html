@@ -9,8 +9,9 @@
     <link rel="shortcut icon" href="assets/icons/shopping-cart-icon-hover.svg" type="image/x-icon">
     <!-- CSS File Below -->
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/shopping-cart.css">
     <!-- JavaScript file -->
-    <script defer src="src/js/script.js"></script>
+    <script defer src="src/js/shopping-cart.js"></script>
     <!-- For Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,17 +23,15 @@
         <h1 class="logo"><a href="#">OmVaibhava Store</a></h1>
         <nav>
             <ul class="pages">
-                <li>Products</li>
+                <a href="index.html"><li>Products</li></a>
                 <a href="about.html"><li>About</li></a>
             </ul>
         </nav>
         <div class="navbar-icons">
-            <a href="shopping-cart.html">
-                <div class="shopping-cart">
-                    <img draggable="false" src="assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
-                    <div class="cart-items" id="cart-items">0</div>
-                </div>
-            </a>
+            <div class="shopping-cart">
+                <img draggable="false" src="assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
+                <div class="cart-items" id="cart-items">0</div>
+            </div>
             <!-- <img src="assets/icons/account-icon.svg" alt="account-icon"> -->
         </div>
     </header>
