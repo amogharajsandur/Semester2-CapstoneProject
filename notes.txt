@@ -6,6 +6,11 @@ Home/Landing Page Content: (Expecting 3/4/5 sections)
     Contact Us (Name, Email, )
     Subscribe to updates/newsletter (Fresh/New products, categories, items)
 
+Idea?
+    What if i make seperate components folder containing resuable components such as header, footer? (as suggested by Google Gemini)
+
+Dummy/demo username, password to be provided when the user clicks on Login/SignUp for the first time.
+
 ==========
 
 5 July 2025, 2358 hrs:
