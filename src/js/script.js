@@ -179,28 +179,28 @@ let decreaseItemQuantity = (idCapture) => {
     // itemFinder checks in the shoppingCart if that item exists. 
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
     
+        /*
+        if (itemFinder == undefined) {
+            alert(`${idCapture} not in cart`);
+        } else {
+            if (itemFinder.quantity === 0) {
+                shoppingCart.pop({
+                    id: idCapture,
+                    quantity: 0
+                });
+                alert(`${idCapture} not in cart`);
+            } else {
+                itemFinder.quantity -= 1
+            }
+        }
+        */
+    
     if(itemFinder === undefined) return;
     else if (itemFinder.quantity === 0) { 
         return alert(`${itemFinder.id} not in cart`);
     } else {
         itemFinder.quantity -= 1;
     }
-
-    /*
-    if (itemFinder == undefined) {
-        alert(`${idCapture} not in cart`);
-    } else {
-        if (itemFinder.quantity === 0) {
-            shoppingCart.pop({
-                id: idCapture,
-                quantity: 0
-            });
-            alert(`${idCapture} not in cart`);
-        } else {
-            itemFinder.quantity -= 1
-        }
-    }
-    */
    
     // console.log(shoppingCart);
     updateItemQuantity(idCapture);

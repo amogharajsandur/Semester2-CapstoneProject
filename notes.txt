@@ -1,3 +1,13 @@
+16 July 2025, 0005 hrs:
+
+Home/Landing Page Content: (Expecting 3/4/5 sections)
+    Welcome section
+    Cart items (loaded from the localStorage if exists, else show explore our product line)
+    Contact Us (Name, Email, )
+    Subscribe to updates/newsletter (Fresh/New products, categories, items)
+
+==========
+
 5 July 2025, 2358 hrs:
 
 Register popup content:

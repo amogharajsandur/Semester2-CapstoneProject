@@ -9,6 +9,18 @@ Amogha's Guide:
 @ Files (Where?)
 ==========
 
+16 July 2025, Tuesday:
+    @index.html:
+    #Learnt about "defer" attribute in <script> element.
+        - Implemented <script> element with the defer attribute in the <head> section. Removed script element from the <body> section.
+    
+    @src folder:
+    #New "src" folder created. Under "src", "css" & "js" have been created. From now, this will contain all the stylesheets & script files.
+    
+    @styles.css renamed to style.css
+
+––––––––––
+
 8 July 2025, Tuesday:
     @index.html:
     # More semantic tags are being used
