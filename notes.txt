@@ -5,7 +5,7 @@ Home/Landing Page Content: (Expecting 3/4/5 sections)
     Cart items (loaded from the localStorage if exists, else show explore our product line)
     Contact Us (Name, Email, )
     Subscribe to updates/newsletter (Fresh/New products, categories, items)
-
+`
 Idea?
     What if i make seperate components folder containing resuable components such as header, footer? (as suggested by Google Gemini)
 

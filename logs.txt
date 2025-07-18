@@ -9,6 +9,19 @@ Amogha's Guide:
 @ Files (Where?)
 ==========
 
+18 July 2025, Friday:
+    @about.html:
+    #Created 3 sections under <main> being Welcome section, subscribe to updates & socials
+    
+    @about.css:
+    #Started styling each section to make it look like the header, footer. Later realised wasn't looking good.
+        => Merged all the individual blocks styles to make the <main> look like header/footer.
+    
+    @notes (16th july update):
+    #Wrote initial ideas for the about page
+
+––––––––––
+
 16 July 2025, Tuesday:
     @index.html:
     #Learnt about "defer" attribute in <script> element.
