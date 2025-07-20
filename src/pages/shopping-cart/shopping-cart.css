@@ -1,3 +1,38 @@
+.cart-tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redirect-button {
+    background-color: #ffffff;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: black 2px solid;
+    padding: 0.3rem;
+    margin: auto;
+    color:#74af21;
+}
+
+    a > .redirect-button a {
+        color:#74af21;
+        text-decoration: none;
+    }
+
+    a > .redirect-button:hover {
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+        color: #4a8e1f;
+    }
+
+    a > .redirect-button:visited {
+        color: #4a8e1f;
+        text-decoration: none;
+    }
+
 .item-card-container {
         margin: auto;
         display: grid;
@@ -144,7 +179,7 @@
                         opacity: 0.5;
                         cursor: not-allowed;
                     }
-                    
+
 /* This is for tablet & ipads */
 
 @media screen and (max-width: 768px) {

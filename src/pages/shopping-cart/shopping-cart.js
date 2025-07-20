@@ -14,7 +14,7 @@ let shoppingCartTemplate = () => {
     } else {
         cartTools.innerHTML = `
         <h1>Your Shopping Cart is empty.</h1>
-        <p>To add items, please visit the <button type="button"><a href="index.html">Products</a></button> page.</p>
+        <p>To add items, please visit the <a href="../../../index.html"><button type="button" class="redirect-button">Products</button></a> page.</p>
         `
     }
 };

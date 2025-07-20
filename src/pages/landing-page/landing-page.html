@@ -9,12 +9,12 @@
     <link rel="shortcut icon" href="assets/icons/shopping-cart-icon-hover.svg" type="image/x-icon">
     <!-- CSS File Below -->
     <link rel="stylesheet" href="../../shared/css/global.css">
-    <link rel="stylesheet" href="shopping-cart.css">
+    <link rel="stylesheet" href="landing-page.css">
     <!-- JavaScript files -->
     <!-- Main File -->
-    <script defer src="shopping-cart.js"></script>
+    <!-- <script defer src="src/js/script.js"></script> -->
     <!-- Data File -->
-    <script src="../../shared/js/data.js"></script>
+    <!-- <script src="src/data/data.js"></script> -->
     <!-- For Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
 <body>
     <!-- This is the navigation bar -->
     <header class="navigation-bar">
-        <h1 class="logo"><a href="../landing-page/landing-page.html">OmVaibhava Store</a></h1>
+        <h1 class="logo">OmVaibhava Store</h1>
         <nav>
             <ul class="pages">
                 <a href="../../../index.html"><li>Products</li></a>
@@ -31,19 +31,41 @@
             </ul>
         </nav>
         <div class="navbar-icons">
-            <div class="shopping-cart">
-                <img draggable="false" src="../../../assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
-                <div class="cart-items" id="cart-items">0</div>
-            </div>
+            <a href="../shopping-cart/shopping-cart.html">
+                <div class="shopping-cart">
+                    <img draggable="false" src="../../../assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
+                    <div class="cart-items" id="cart-items">0</div>
+                </div>
+            </a>
             <!-- <img src="assets/icons/account-icon.svg" alt="account-icon"> -->
         </div>
     </header>
     <!-- This is the main content page -->
-    <!-- <main class="item-card-container" id="item-card-container"> -->
     <main>
-        <!-- individual item-cards will be rendered here -->
-        <div class="cart-tools" id="cart-tools"></div>
-        <div class="cart-items-container" id="cart-items-container"></div>
+        <section>
+            <h3>Welcome to OmVaibhava Store!</h3>
+            <p>Fresh goods</p>
+            <p>Affordable pricing</p>
+            <p>Fast delivery</p>
+        </section>
+        <section>
+            <h3>Subscribe to our Updates!</h3>
+            <form action="">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Example Name" id="name" required />
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@gmail.com" id="email" required />
+                <label for="phone">Phone Number</label>
+                <input type="text" placeholder="+91 1234567890" id="phone" required />
+                <label for="comments">Any Comments/Enquiries?</label>
+                <textarea placeholder="Any Comments?" id="comments"></textarea>
+                <button type="reset">Clear</button>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h3>Follow our socials</h3>
+        </section>
     </main>
     <!-- This is the footer section -->
     <footer>
