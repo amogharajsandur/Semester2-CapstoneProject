@@ -8,9 +8,13 @@
     <!-- Page's icon (Favicon) -->
     <link rel="shortcut icon" href="assets/icons/shopping-cart-icon-hover.svg" type="image/x-icon">
     <!-- CSS File Below -->
-    <link rel="stylesheet" href="src/css/style.css">
-    <!-- JavaScript file -->
-    <script defer src="src/js/script.js"></script>
+    <link rel="stylesheet" href="src/shared/css/global.css">
+    <link rel="stylesheet" href="src/pages/products/style.css">
+    <!-- JavaScript files -->
+    <!-- Main File -->
+    <script defer src="src/pages/products/script.js"></script>
+    <!-- Data File -->
+    <script src="src/shared/js/data.js"></script>
     <!-- For Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,11 +27,11 @@
         <nav>
             <ul class="pages">
                 <li>Products</li>
-                <a href="about.html"><li>About</li></a>
+                <a href="src/pages/about/about.html"><li>About</li></a>
             </ul>
         </nav>
         <div class="navbar-icons">
-            <a href="shopping-cart.html">
+            <a href="src/pages/shopping-cart/shopping-cart.html">
                 <div class="shopping-cart">
                     <img draggable="false" src="assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
                     <div class="cart-items" id="cart-items">0</div>
