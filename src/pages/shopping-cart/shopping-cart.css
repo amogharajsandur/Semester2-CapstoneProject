@@ -3,7 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.7rem;
+    text-align: center;
+    padding: 1rem;
+    /* margin: auto; */
 }
+
+    .cart-tools h1 {
+        font-size: 1.3rem;
+    }
 
 .redirect-button {
     background-color: #ffffff;

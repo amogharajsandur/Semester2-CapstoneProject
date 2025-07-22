@@ -9,6 +9,58 @@ Amogha's Guide:
 @ Files (Where?)
 ==========
 
+20 July 2025, Sunday: [#Please check the folder structure & the git logs before reading this]
+    @REPOSITORY folder:
+    #Major restructuring/reorganisation of files, folders done. (done for easy code maintainence & file management)
+        @src folder
+        - Removed the old css, js folders; Moved the inner code files to different folders.
+        - New folders created under "src" folder: 
+            src
+                components [#will create reusable components later]
+                    header folder
+                    footer folder
+                pages [#below folders are created based on different pages of this project;]
+                    about > .html, .css
+                    landing-page > .html, .css
+                    products > .html, .css, .js [#the html file here is index.html. Will be moved later]
+                    shopping-cart > .html, .css, .js
+                shared [#holds important data, global styles]
+                    css > global.css
+                    js > data.js
+
+    @all html files:
+    - Relinking of stylesheets, script files done.
+
+    @dry-fruits folder:
+    #new "dry-fruits" folder created under images.
+
+    @all css files:
+    - Moved common element's styles like header, body, footer, etc to "global.css" file
+
+    @global.css:
+    #new "global.css" file is created to reduce code redundancy & easily change styles across repo.
+
+    @data.ja:
+    #new "data.js" file created to hold essential data such as item details. (done to reduce code repeatation, for easy modifications & consistency in details across project)
+
+    @assets folder:
+    #changed images of cucumber, radish to images with white background (consistency in images)
+
+    @landing-page html, css:
+    - copied contents from about page to landing page html, css. (Will make changes to the about page soon)
+
+    @shopping-cart css:
+    - styled .cart tools so it appears in the center along with a gap between internal elements.
+
+    @shopping-cart js:
+    - parses content from localStorage to update the quantity on shopping Cart icon.
+    # Started working on the cart items render template (shoppingCartTemplate)
+
+    @logs:
+    #detailed documentation of repo done
+
+==========
+
 18 July 2025, Friday:
     @about.html:
     #Created 3 sections under <main> being Welcome section, subscribe to updates & socials
