@@ -1,5 +1,18 @@
 16 July 2025, 0005 hrs:
 
+Planning to "reactify" / rewrite project in react.js
+    Current Components basic ideas:
+        header
+        footer
+        products page item card
+        shopping cart item card
+        buttons (increaseItemQuantity, decreaseItemQuantity, redirect)
+
+==========
+
+
+16 July 2025, 0005 hrs:
+
 Home/Landing Page Content: (Expecting 3/4/5 sections)
     Welcome section
     Cart items (loaded from the localStorage if exists, else show explore our product line)

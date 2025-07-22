@@ -9,6 +9,15 @@ Amogha's Guide:
 @ Files (Where?)
 ==========
 
+22 July 2025, Tuesday:
+    @shopping-cart.js:
+        #Attempted to render shopping cart items via shoppingCartTemplate().
+            > "undefined" is shown in card's title, source, alt, price.
+        #Before, image wasn't shown on the buttons. Added "../../../" in front of path.
+            => Changing source files / parsing to be properly done.
+
+==========
+
 20 July 2025, Sunday: [#Please check the folder structure & the git logs before reading this]
     @REPOSITORY folder:
     #Major restructuring/reorganisation of files, folders done. (done for easy code maintainence & file management)
@@ -28,19 +37,19 @@ Amogha's Guide:
                     css > global.css
                     js > data.js
 
-    @all html files:
+    @all .html files:
     - Relinking of stylesheets, script files done.
 
     @dry-fruits folder:
     #new "dry-fruits" folder created under images.
 
-    @all css files:
+    @all .css files:
     - Moved common element's styles like header, body, footer, etc to "global.css" file
 
     @global.css:
     #new "global.css" file is created to reduce code redundancy & easily change styles across repo.
 
-    @data.ja:
+    @data.js:
     #new "data.js" file created to hold essential data such as item details. (done to reduce code repeatation, for easy modifications & consistency in details across project)
 
     @assets folder:
@@ -49,14 +58,14 @@ Amogha's Guide:
     @landing-page html, css:
     - copied contents from about page to landing page html, css. (Will make changes to the about page soon)
 
-    @shopping-cart css:
+    @shopping-cart.css:
     - styled .cart tools so it appears in the center along with a gap between internal elements.
 
-    @shopping-cart js:
+    @shopping-cart.js:
     - parses content from localStorage to update the quantity on shopping Cart icon.
     # Started working on the cart items render template (shoppingCartTemplate)
 
-    @logs:
+    @logs.txt:
     #detailed documentation of repo done
 
 ==========
