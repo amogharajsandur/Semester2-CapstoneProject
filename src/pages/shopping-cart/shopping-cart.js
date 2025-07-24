@@ -56,7 +56,7 @@ let totalPrice = () => {
         `;
         cartToolsExtended.innerHTML = `
         <p>To add more items, please visit the <a href="../../../index.html"><button type="button" class="button-component redirect-button">Products</button></a> page.</p>
-        <button type="button" class="button-component complete-purchase-button">Complete purchase</button>
+        <button onclick="completePurchase()" type="button" class="button-component complete-purchase-button">Complete purchase</button>
         <button onclick="clearShoppingCart()" type="button" class="button-component clear-cart-button">Clear Shopping Cart</button>
         `
     }
@@ -140,3 +140,9 @@ let cartItemQuantity = () => {
     shoppingCartTemplate();
 }
 cartItemQuantity();
+
+let completePurchase = () => {
+    alert("Shopping Cart items purchased, thank you! 🙏");
+    alert("By clicking OK, the shopping cart will be cleared.")
+    clearShoppingCart();
+}
