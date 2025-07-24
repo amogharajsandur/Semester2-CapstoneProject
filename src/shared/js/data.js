@@ -132,5 +132,12 @@ let cardContent = [
         alt: "Tomato",
         title: "Tomato",
         price: 15.00
-    }
+    },
+    {
+        id: "cashew",
+        image: "assets/images/dry-fruits/cashew-nut.jpeg",
+        alt: "Cashew Nut",
+        title: "Cashew Nut",
+        price: 78.00
+    },
 ];

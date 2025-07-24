@@ -9,6 +9,19 @@ Amogha's Guide:
 @ Files (Where?)
 ==========
 
+25 July 2025, Friday:
+    @shopping-cart.js:
+        #Complete shopping cart page with functionality being: add/subtract item, delete item, clear cart, total cart value.
+    
+    @about.html:
+        - Favicon linking fixed
+    
+    @shopping-cart.html:
+        - Favicon linking fixed.
+        - New cart tools extended added. This will help in adding more items.
+
+==========
+
 22 July 2025, Tuesday:
     @shopping-cart.js:
         #Attempted to render shopping cart items via shoppingCartTemplate().

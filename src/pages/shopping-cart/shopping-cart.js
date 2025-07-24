@@ -1,6 +1,7 @@
 let cartItems = document.getElementById("cart-items");
 // cartTools will contain useful cart information/metrics, cart manupulation buttons, etc.
 let cartTools = document.getElementById("cart-tools");
+let cartToolsExtended = document.getElementById("cart-tools-extended");
 // cartItemsContainer will be the place where render the cart items will be rendered.
 let cartItemsContainer = document.getElementById("cart-items-container");
 
@@ -11,61 +12,61 @@ let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 let shoppingCartTemplate = () => {
     if (shoppingCart.length !== 0) {
         return (cartItemsContainer.innerHTML = shoppingCart.map((item) => {
-        // Destructuring is used, so to not keep writing as item.id, item.image, etc.
-        let {id, image, alt, title, price} = item;
-        let itemCheck = shoppingCart.find((item)=> item.id === id) || [];
-        console.log(id, image)
+        let {id, quantity} = item;
+        let itemCheck = cardContent.find((item)=> item.id === id) || [];
+        let {title, price, image, alt} = itemCheck;
         return `
-                <div class="item-card" id="${id}">
-                    <img width="100%" height="100%" src="${image}" alt="${alt} Image" draggable="false">
-                    <div class="item-card-details">
-                        <h2>${title}</h2>
-                        <div class="price-quantity">
-                            <h3>₹ ${price}</h3>
-                            <div class="quantity-button">
-                                <img onclick="decreaseItemQuantity('${id}')" src="../../../assets/icons/subtract-icon.svg" alt="Decrease Quantity" draggable="false">
-                                <div class="quantity" id="quantity-${id}"> ${itemCheck.quantity === undefined ? 0 : itemCheck.quantity} </div>
-                                <img onclick="increaseItemQuantity('${id}')" src="../../../assets/icons/add-icon.svg" alt="Increase Quantity" draggable="false">
-                            </div>
+            <div class="cart-item-card" id="${id}">
+                <div class="cart-item-card-details">
+                    <h2>${title}, (₹${price} each)</h2>
+                    <div class="price-quantity">
+                        <h3>Price: ₹${price * quantity}</h3>
+                        <div class="quantity-button">
+                            <img class="cart-item-card-buttons btn-decrease" onclick="decreaseItemQuantity('${id}')" src="../../../assets/icons/subtract-icon.svg" alt="Decrease Quantity" draggable="false">
+                            <div class="quantity" id="quantity-${id}"> ${quantity} </div>
+                            <img class="cart-item-card-buttons btn-increase" onclick="increaseItemQuantity('${id}')" src="../../../assets/icons/add-icon.svg" alt="Increase Quantity" draggable="false">
                         </div>
+                        <img class="cart-item-card-buttons remove-item-btn" onclick="removeCartItem('${id}')" src="../../../assets/icons/remove-icon.svg" alt="Remove item from cart" draggable="false">
                     </div>
                 </div>
-            `}).join('')
-        );
+                <img width="100%" height="100%" src="../../../${image}" alt="${alt} Image" draggable="false">
+            </div>
+        `
+        }).join(""));
     } else {
+        cartItemsContainer.innerHTML = ``;
         cartTools.innerHTML = `
         <h1>Your Shopping Cart is empty.</h1>
-        <p>To add items, please visit the <a href="../../../index.html"><button type="button" class="redirect-button">Products</button></a> page.</p>
-        `
+        <p>To add items, please visit the <a href="../../../index.html"><button type="button" class="button-component redirect-button">Products</button></a> page.</p>
+        `;
+        cartToolsExtended.innerHTML = ``
     }
 };
 shoppingCartTemplate();
 
-let cartItemQuantity = () => {
-    // here, (x = previous item) & (y = current item)
-    cartItems.innerHTML = shoppingCart.map((item) => item.quantity).reduce((x,y) => x + y, 0);
-}
-cartItemQuantity();
+let totalPrice = () => {
+    if (shoppingCart.length !== 0) {
+        let price = shoppingCart.map((itm) => {
+            let {quantity, id} = itm;
+            let itemCheck = cardContent.find((x)=> x.id === id) || [];
+            return (quantity * itemCheck.price);
+        }).reduce((x,y) => x+y);
+        cartTools.innerHTML = `
+        <h2>Total Cart Value: ₹${price}<h2>
+        `;
+        cartToolsExtended.innerHTML = `
+        <p>To add more items, please visit the <a href="../../../index.html"><button type="button" class="button-component redirect-button">Products</button></a> page.</p>
+        <button type="button" class="button-component complete-purchase-button">Complete purchase</button>
+        <button onclick="clearShoppingCart()" type="button" class="button-component clear-cart-button">Clear Shopping Cart</button>
+        `
+    }
+    else return;
+};
+totalPrice();
 
 let decreaseItemQuantity = (idCapture) => {
     // itemFinder checks in the shoppingCart if that item exists. 
     let itemFinder = shoppingCart.find((itemCheck) => itemCheck.id === idCapture);
-    
-        /*
-        if (itemFinder == undefined) {
-            alert(`${idCapture} not in cart`);
-        } else {
-            if (itemFinder.quantity === 0) {
-                shoppingCart.pop({
-                    id: idCapture,
-                    quantity: 0
-                });
-                alert(`${idCapture} not in cart`);
-            } else {
-                itemFinder.quantity -= 1
-            }
-        }
-        */
     
     if(itemFinder === undefined) return;
     else if (itemFinder.quantity === 0) { 
@@ -78,9 +79,13 @@ let decreaseItemQuantity = (idCapture) => {
     updateItemQuantity(idCapture);
 
     shoppingCart = shoppingCart.filter((x) => x.quantity !== 0);
+
     
     // saves a key "shoppingCart" with the values of shoppingCart array. JSON.stringify converts the objects into an understandable format
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    
+    // Rerendering the entire cart post cart filtering.
+    shoppingCartTemplate();
 };
 
 let increaseItemQuantity = (idCapture) => {
@@ -97,7 +102,9 @@ let increaseItemQuantity = (idCapture) => {
 
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     
-    // console.log(shoppingCart);
+    // Rerendering the entire cart post cart filtering.
+    shoppingCartTemplate();
+
     updateItemQuantity(idCapture)
 };
 
@@ -108,4 +115,28 @@ let updateItemQuantity = (idCapture) => {
     document.getElementById(`quantity-${idCapture}`).innerHTML = itemFinder.quantity;
     
     cartItemQuantity();
+    totalPrice();
 };
+
+let removeCartItem = (idCapture) => {
+    shoppingCart = shoppingCart.filter((item)=> item.id !== idCapture);
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    shoppingCartTemplate();
+    totalPrice();
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    cartItemQuantity();
+};
+
+let clearShoppingCart = () => {
+    shoppingCart = []
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    shoppingCartTemplate();
+    cartItemQuantity();
+};
+
+let cartItemQuantity = () => {
+    // here, (x = previous item) & (y = current item)
+    cartItems.innerHTML = shoppingCart.map((item) => item.quantity).reduce((x,y) => x + y, 0);
+    shoppingCartTemplate();
+}
+cartItemQuantity();
