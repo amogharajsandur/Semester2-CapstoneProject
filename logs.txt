@@ -10,6 +10,28 @@ Amogha's Guide:
 ==========
 
 25 July 2025, Friday:
+    @header .js & .css:
+        - created header component & render function.
+    
+    @footer .js & .css:
+        - created footer component & render function.
+    
+    @index.html:
+        - removed old code for header & footer. instead now using components.
+
+    @shopping-cart.html:
+        - attempted to use components, but page linking error arrises.
+            => Create seperate variable for different links. Use if-else to detect page & insert the link based on that.
+
+    @app.js:
+        #attempted to create a main js file behind loading all the components & files.
+    
+    @snippets.txt:
+        #archived old header, footer html codes.
+
+==========
+
+24 July 2025, Thursday:
     @shopping-cart.js:
         #Complete shopping cart page with functionality being: add/subtract item, delete item, clear cart, total cart value.
     
