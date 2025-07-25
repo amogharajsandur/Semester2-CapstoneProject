@@ -140,4 +140,32 @@ let cardContent = [
         title: "Cashew Nut",
         price: 78.00
     },
+    {
+        id: "almonds",
+        image: "assets/images/dry-fruits/almonds.jpeg",
+        alt: "Almonds",
+        title: "Almonds",
+        price: 63.00
+    },
+    {
+        id: "dates",
+        image: "assets/images/dry-fruits/dates.jpeg",
+        alt: "Dates",
+        title: "Dates",
+        price: 57.00
+    },
+    {
+        id: "raisins",
+        image: "assets/images/dry-fruits/raisins.jpeg",
+        alt: "Raisins",
+        title: "Raisins",
+        price: 57.00
+    },
+    {
+        id: "coconut",
+        image: "assets/images/fruits/coconut.jpeg",
+        alt: "Coconut",
+        title: "Coconut",
+        price: 31.00
+    },
 ];
