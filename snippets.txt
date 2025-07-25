@@ -1,4 +1,38 @@
 =========================
+footer
+=========================
+
+<p>© OmVaibhava Store X <a target="_blank" href="https://www.linkedin.com/in/amogharajsandur/">Amogha Raj Sandur</a></p>
+        <nav class="social-icons">
+            <a href="https://www.instagram.com/amogharajsandur/" target="_blank"><img draggable="false" src="assets/icons/instagram-icon.svg" alt="instagram-icon"></a>
+            <a href="https://www.linkedin.com/in/amogharajsandur/" target="_blank"><img draggable="false" src="assets/icons/linkedin-icon.svg" alt="linkedin-icon"></a>
+            <a href="https://www.youtube.com/@amogharajsandur" target="_blank"><img draggable="false" src="assets/icons/yt-icon.svg" alt="youtube-icon"></a>
+        </nav>
+
+=========================
+header
+=========================
+
+<!-- This is the navigation bar -->
+    <!-- <header class="navigation-bar">
+        <h1 class="logo"><a href="src/pages/landing-page/landing-page.html">OmVaibhava Store</a></h1>
+        <nav>
+            <ul class="pages">
+                <li>Products</li>
+                <a href="src/pages/about/about.html"><li>About</li></a>
+            </ul>
+        </nav>
+        <div class="navbar-icons">
+            <a href="src/pages/shopping-cart/shopping-cart.html">
+                <div class="shopping-cart">
+                    <img draggable="false" src="assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
+                    <div class="cart-items" id="cart-items">0</div>
+                </div>
+            </a>
+        </div>
+    </header> -->
+
+=========================
 .navigation-bar
 =========================
 
