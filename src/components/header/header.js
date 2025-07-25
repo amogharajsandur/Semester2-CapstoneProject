@@ -11,7 +11,7 @@ let header = `
     <div class="navbar-icons">
         <a href="src/pages/shopping-cart/shopping-cart.html">
             <div class="shopping-cart">
-                <img draggable="false" src="assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon">
+                <img draggable="false" src="assets/icons/shopping-cart-icon.svg" alt="shopping-cart-icon" loading="lazy">
                 <div class="cart-items" id="cart-items">0</div>
             </div>
         </a>

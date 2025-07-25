@@ -22,14 +22,14 @@ let shoppingCartTemplate = () => {
                     <div class="price-quantity">
                         <h3>Price: ₹${price * quantity}</h3>
                         <div class="quantity-button">
-                            <img class="cart-item-card-buttons btn-decrease" onclick="decreaseItemQuantity('${id}')" src="../../../assets/icons/subtract-icon.svg" alt="Decrease Quantity" draggable="false">
+                            <img class="cart-item-card-buttons btn-decrease" onclick="decreaseItemQuantity('${id}')" src="../../../assets/icons/subtract-icon.svg" alt="Decrease Quantity" draggable="false" loading="lazy">
                             <div class="quantity" id="quantity-${id}"> ${quantity} </div>
-                            <img class="cart-item-card-buttons btn-increase" onclick="increaseItemQuantity('${id}')" src="../../../assets/icons/add-icon.svg" alt="Increase Quantity" draggable="false">
+                            <img class="cart-item-card-buttons btn-increase" onclick="increaseItemQuantity('${id}')" src="../../../assets/icons/add-icon.svg" alt="Increase Quantity" draggable="false" loading="lazy">
                         </div>
-                        <img class="cart-item-card-buttons remove-item-btn" onclick="removeCartItem('${id}')" src="../../../assets/icons/remove-icon.svg" alt="Remove item from cart" draggable="false">
+                        <img class="cart-item-card-buttons remove-item-btn" onclick="removeCartItem('${id}')" src="../../../assets/icons/remove-icon.svg" alt="Remove item from cart" draggable="false" loading="lazy">
                     </div>
                 </div>
-                <img width="100%" height="100%" src="../../../${image}" alt="${alt} Image" draggable="false">
+                <img width="100%" height="100%" src="../../../${image}" alt="${alt} Image" draggable="false" loading="lazy">
             </div>
         `
         }).join(""));
